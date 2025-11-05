@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nequi Glitch | Android Version | by Josh</title>
+  <link rel="icon" type="image/png" href="nequi-logo.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+  <div class="controls">
+    <p class="titulo-logo">
+      
+      Nequi Glitch 
+      <img src="nequi-logo.png" alt="Es legal?" class="icono">
+    </p>
+    
+    <hr class="divisor1">
+
+    <h2>-> Android Version <-</h2>
+    <h5>Es importante seguir la misma estructura del ejemplo para evitar errores durante la generacion de la imagen.</h5>
+
+    <hr class="divisor1">
+
+    <label for="favClients">Favoritos</label>
+    <select id="favoritos">
+      <option value="">Seleccionar...</option>
+      <option value="1">Don Julio</option>
+      <option value="2">Arepas</option>
+      <option value="3">Salchipapa</option>
+      <option value="4">Panaderia Boston</option>
+      <option value="5">Amborguesas "Donde mi ex y yo"</option>
+      <option value="6">Lichigo</option>
+      <option value="7">Carniceria</option>
+    </select>
+
+    <hr class="divisor2">
+
+    <label>Para</label>
+    <input id="inpPara" type="text" placeholder="Nombre o entidad">
+
+    <label>¿Cuánto?</label>
+    <div class="cuanto-flex">
+      <input id="inpCuanto" type="text" placeholder="$ 123.456,00">
+      <button id="btnPlusOne" class="btn terciary sumarBtn" data-valor="1000">+1</button>
+      <button id="btnPlusFive" class="btn terciary sumarBtn" data-valor="5000">+5</button>
+      <button id="btnPlusTen" class="btn terciary sumarBtn" data-valor="10000">+10</button>
+    </div>
+
+    <label>Número Nequi</label>
+    <input id="inpNumero" type="text" placeholder="300 123 4567">
+
+    <label>Fecha</label>
+    <div class="fecha-flex">
+      <input id="inpFecha" type="text" placeholder="03 de noviembre de 2025 a las 04:14 p.m.">
+      <button id="btnFecha" class="btn terciary">Hoy</button>
+    </div>
+
+    <hr class="divisor2">
+    
+
+    <div class="buttons">
+      <!-- <button id="btnRender" class="btn">Generar + Mostrar</button> -->
+      <button id="btnDownload" class="btn secondary">Descargar</button>
+      <button type="reset" class="btn primary limpiarBtn">Limpiar</button>
+    </div>
+  </div>
+
+  <div class="canvas-wrap">
+    <div class="preview">
+        <div id="ticketPreview" class="ticket ticket--preview">
+            <div class="overlay-text t-para"></div>
+            <div class="overlay-text t-cuanto"></div>
+            <div class="overlay-text t-numero"></div>
+            <div class="overlay-text t-fecha"></div>
+        </div>
+    </div>
+    <img id="resultImg" alt="Resultado generado" style="display:none" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

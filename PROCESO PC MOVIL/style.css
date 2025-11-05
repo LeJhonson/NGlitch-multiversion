@@ -1,0 +1,336 @@
+:root {
+  --primary-color: #ff1680;
+  --background-color: #ffffff;
+  --text-color: #200020;
+}
+
+/* --- Media Query para Celulares --- */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Apila el formulario y el preview */
+        gap: 25px; /* Espacio entre el formulario y el preview */
+        padding: 30px 0; /* Menos padding en los lados */
+        align-items: center; /* Centra los elementos apilados */
+    }
+
+    .controls {
+        margin-top: 60px; /* Elimina el margen superior */
+        max-width: 95vw; /* Usa casi todo el ancho de la pantalla */
+        min-height: auto; /* Deja que el contenido defina la altura */
+        box-shadow: 0 2px 10px var(--primary-color); /* Sombra más sutil */
+    }
+
+    .canvas-wrap {
+        /* max-width: 95vw; */
+        width: 100%;
+        margin-top: 40px; /* Espacio después del formulario */
+        padding: 10px;
+        margin-bottom: 60px;
+    }
+
+    /* Ajustar el tamaño del preview para celular */
+    .ticket--preview {
+        width: 100%; /* Hace que la imagen de base ocupe todo el ancho */
+        height: auto; /* Deja que la altura se ajuste automáticamente */
+        aspect-ratio: 360 / 800; /* Mantiene la proporción original (360px de ancho / 800px de alto) */
+        max-width: 360px; /* Para que no se vea ridículamente grande */
+    }
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--background-color);
+  display: flex;
+  gap: 5vw;
+  padding: 0 0;
+  justify-content: center;
+  /* ¡CAMBIA ESTO! */
+  align-items: center; /* Antes estaba en flex-start */
+  /* --- */
+  color: var(--text-color);
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Panel de formulario */
+.titulo-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  text-align: center;
+}
+ 
+.icono {
+  width: 40px;
+  height: 40px;
+}
+select {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 4px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  /* border: 1px solid var(--background-color); */
+  font-size: 14px;
+  /* color: var(--text-color); */
+  background-color: #461b3d50; /* color de fondo suave */
+  outline: none;
+  
+}
+select:hover {
+  border-color: var(--primary-color);
+}
+select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 22, 128, 0.1);
+}
+
+/* Estilos para las opciones del select */
+select option {
+  background-color: #f0e3ff;
+  color: var(--text-color);
+  padding: 12px;
+  font-size: 15px;
+  outline: none;
+}
+select option:checked {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  outline: none;
+}
+hr.divisor1 {
+  border: none;
+  border-top: 1.5px solid var(--primary-color); /* color de la línea */
+  margin: 15px auto;               /* espacio arriba y abajo */
+  opacity: 0.6;
+  align-items: center;                 /* un poco más suave */
+  width: 80%;
+}
+hr.divisor2 {
+  border: none;
+  border-top: 1.5px solid var(--text-color); /* color de la línea */
+  margin: 15px 0;               /* espacio arriba y abajo */
+  opacity: 0.6;                 /* un poco más suave */
+}
+.controls {
+  width: 100%; /* Toma todo el ancho disponible */
+  max-width: 365px; /* Pero no más de esto en PC */
+  min-height: 79vh; /* Usamos min-height para que se estire si es necesario */
+  background: var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--primary-color);
+  padding: 18px;
+  overflow-y: visible; /* Lo cambiamos a visible */
+  position: relative;
+}
+.controls h2 {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: -20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+.controls h5 {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+input {
+  width: 100%;
+  padding: 10px 14px;          /* más espacio interno */
+  border-radius: 10px;         /* bordes más suaves */
+  border: 1.5px solid #ccc;    /* borde más visible */
+  font-size: 15px;
+  line-height: 1.4;            /* evita que el texto toque el borde */
+  box-sizing: border-box;      /* asegura que padding no rompa el ancho */
+  overflow: visible;           /* evita cortes del texto */
+}
+input:hover {
+  border-color: var(--primary-color);
+ } /* cambia el color del borde al pasar el ratón */
+.fecha-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cuanto-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.buttons {
+  margin-top: 14px;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  align-items: center;
+}
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  width: 140px;
+  background: var(--text-color);
+  display: block;
+  margin: 0 auto;
+}
+.btn.primary:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+.btn.secondary {
+  font-family: 'Manrope', sans-serif;
+  background: var(--text-color);
+  display: block;
+  margin: 10px auto;
+  margin-top: 25  px;
+  width: 140px;
+  font-size: 20px;
+}
+.btn.secondary:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+.btn.terciary {
+  font-family: 'Manrope', sans-serif;
+  background: var(--text-color);
+  display: block;
+  margin: 0 auto;
+}
+.btn.terciary:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+} 
+/* Área de previsualización */
+.canvas-wrap {
+  /* ¡ADIÓS! height: 80vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px var(--primary-color);
+  border-radius: 12px;
+  padding: 15px;
+  background: var(--background-color);
+  width: 100%; /* Aseguramos que tome el espacio si está apilado */
+  max-width: 365px; /* Tamaño máximo para el preview */
+}
+
+/* Preview */
+.ticket--preview {
+  position: relative;
+  width: 360px;
+  height: 800px;
+  background: url('baseAndroid.jpg') center top / cover no-repeat;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Textos de overlay (preview) */
+.overlay-text {
+  position: absolute;
+  color: var(--text-color);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.t-para   { top: 47%; left: 8%; font-size: 14px; }
+.t-cuanto { top: 53.3%; left: 8%; font-size: 14px; }
+.t-numero { top: 59.3%; left: 8%; font-size: 14px; }
+.t-fecha  { top: 65.4%; left: 8%; font-size: 14px; }
+
+/* Imagen generada */
+#resultImg {
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 12px;
+}
+
+/* Reemplazar los estilos .version-selector actuales por: */
+.version-selector {
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.version-radio {
+  display: flex;
+  align-items: center; /* asegura alineación vertical */
+  gap: 8px;
+}
+
+/* Unificar y corregir estilos del radio para que sean perfectamente redondos */
+.version-radio input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+  vertical-align: middle; /* corregido: 'center' -> 'middle' */
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+}
+
+/* Etiqueta junto al radio, para que quede perfectamente centrada */
+.version-radio label {
+  display: inline-block;
+  margin: 0;
+  line-height: 20px; /* coincide con la altura del radio */
+  font-size: 16px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.version-radio input[type="radio"]:checked {
+  border-color: var(--primary-color);
+}
+
+.version-radio input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.version-radio input[type="radio"]:hover {
+  border-color: var(--primary-color);
+}

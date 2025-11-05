@@ -1,0 +1,210 @@
+:root {
+  --primary-color: #ff1680;
+  --background-color: #ffffff;
+  --text-color: #200020;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--background-color);
+  display: flex;
+  gap: 30vh;
+  padding: 24px;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  margin: 30px 0px;
+}
+
+/* Panel de formulario */
+.titulo-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  text-align: center;
+}
+ 
+.icono {
+  width: 40px;
+  height: 40px;
+}
+select {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 4px;
+  border-radius: 8px;
+  /* border: 1px solid var(--background-color); */
+  font-size: 14px;
+  /* color: var(--text-color); */
+  background-color: #461b3d48; /* color de fondo suave */
+  outline: none;
+  
+}
+select:hover {
+  border-color: var(--primary-color);
+
+ } /* cambia el color del borde al pasar el ratón */
+select:focus { 
+  outline: none; /* elimina el contorno predeterminado */
+}
+hr.divisor1 {
+  border: none;
+  border-top: 1.5px solid var(--primary-color); /* color de la línea */
+  margin: 25px auto;               /* espacio arriba y abajo */
+  opacity: 0.6;
+  align-items: center;                 /* un poco más suave */
+  width: 80%;
+}
+hr.divisor2 {
+  border: none;
+  border-top: 1.5px solid var(--text-color); /* color de la línea */
+  margin: 15px 0;               /* espacio arriba y abajo */
+  opacity: 0.6;                 /* un poco más suave */
+}
+.controls {
+  width: 340px;
+  background: var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--primary-color);
+  padding: 18px;
+}
+.controls h2 {
+  font-size: 22px;
+  margin-bottom: -20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+.controls h5 {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+input {
+  width: 100%;
+  padding: 10px 14px;          /* más espacio interno */
+  border-radius: 10px;         /* bordes más suaves */
+  border: 1.5px solid #ccc;    /* borde más visible */
+  font-size: 15px;
+  line-height: 1.4;            /* evita que el texto toque el borde */
+  box-sizing: border-box;      /* asegura que padding no rompa el ancho */
+  overflow: visible;           /* evita cortes del texto */
+}
+input:hover {
+  border-color: var(--primary-color);
+ } /* cambia el color del borde al pasar el ratón */
+.fecha-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cuanto-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.buttons {
+  margin-top: 14px;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  align-items: center;
+}
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  width: 140px;
+  background: var(--text-color);
+  display: block;
+  margin: 0 auto;
+}
+.btn.primary:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+.btn.secondary {
+  font-family: 'Manrope', sans-serif;
+  background: var(--text-color);
+  display: block;
+  margin: 10px auto;
+  margin-top: 25  px;
+  width: 140px;
+  font-size: 20px;
+}
+.btn.secondary:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+.btn.terciary {
+  font-family: 'Manrope', sans-serif;
+  background: var(--text-color);
+  display: block;
+  margin: 0 auto;
+}
+.btn.terciary:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+} 
+/* Área de previsualización */
+.canvas-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 3vh;
+  box-shadow: 0 4px 15px var(--primary-color),;
+}
+
+/* Preview */
+.ticket--preview {
+  position: relative;
+  width: 360px;
+  height: 800px;
+  background: url('baseIphone.jpg') center top / cover no-repeat;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Textos de overlay (preview) */
+.overlay-text {
+  position: absolute;
+  color: var(--text-color);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.t-para   { top: 47.5%; left: 6.6%; font-size: 13px; }
+.t-cuanto { top: 53.5%; left: 6.6%; font-size: 13px; }
+.t-numero { top: 59.4%; left: 6.6%; font-size: 13px; }
+.t-fecha  { top: 65.3%; left: 6.6%; font-size: 13px; }
+
+/* Imagen generada */
+#resultImg {
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 12px;
+}
