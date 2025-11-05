@@ -39,3 +39,10 @@ Si los astros se alinean y el *Wi-Fi* no se cae:
 ---
 
 ## ⚒️Construido por el manco de mi persona: 🍪 *Joshy* 🍪
+
+En caso de algun detalle, todo esta desplegado a traves de los siguientes enlaces:
+
+**🔗 [Enlace 1](https://nglitch-multiversion.pages.dev/) 🔗 ** y **🔗 [Enlace 2](https://nglitchmultiver.netlify.app/) 🔗** 
+
+Si algo falla, no funciona bien o solo debo agregar mas favoritos, ya sabes donde pedirlo 📲.
+
