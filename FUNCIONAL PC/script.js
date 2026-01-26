@@ -223,10 +223,10 @@ const versionConfig = {
     previewHeight: '800px',
     output: { width: 720, height: 1610 }, // tamaño real para la descarga
     positions: {
-      para: { top: '757px', left: '57px', fontSize: '27px' },
-      cuanto: { top: '858px', left: '57px', fontSize: '27px' },
-      numero: { top: '955px', left: '57px', fontSize: '27px' },
-      fecha: { top: '1053px', left: '57px', fontSize: '27px' }
+      para: { top: '757px', left: '57px', fontSize: '28px' },
+      cuanto: { top: '858px', left: '57px', fontSize: '28px' },
+      numero: { top: '955px', left: '57px', fontSize: '28px' },
+      fecha: { top: '1053px', left: '57px', fontSize: '29px' }
     },
     preview: {
       para: { top: '47.6%', left: '8%', fontSize: '14px' },

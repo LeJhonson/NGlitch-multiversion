@@ -3,20 +3,55 @@
   --background-color: #ffffff;
   --text-color: #200020;
 }
+/* --- Media Query para Celulares --- */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Apila el formulario y el preview */
+        gap: 25px; /* Espacio entre el formulario y el preview */
+        padding: 30px 0; /* Menos padding en los lados */
+        align-items: center; /* Centra los elementos apilados */
+    }
+
+    .controls {
+        margin-top: 60px; /* Elimina el margen superior */
+        max-width: 95vw; /* Usa casi todo el ancho de la pantalla */
+        min-height: auto; /* Deja que el contenido defina la altura */
+        box-shadow: 0 2px 10px var(--primary-color); /* Sombra más sutil */
+    }
+
+    .canvas-wrap {
+        /* max-width: 95vw; */
+        width: 100%;
+        margin-top: 40px; /* Espacio después del formulario */
+        padding: 10px;
+        margin-bottom: 60px;
+    }
+
+    /* Ajustar el tamaño del preview para celular */
+    .ticket--preview {
+        width: 100%; /* Hace que la imagen de base ocupe todo el ancho */
+        height: auto; /* Deja que la altura se ajuste automáticamente */
+        aspect-ratio: 360 / 800; /* Mantiene la proporción original (360px de ancho / 800px de alto) */
+        max-width: 360px; /* Para que no se vea ridículamente grande */
+    }
+}
 
 body {
   font-family: 'Manrope', sans-serif;
   background: var(--background-color);
   display: flex;
   gap: 5vw;
-  padding: 0 24px;
+  padding: 0 0;
   justify-content: center;
-  align-items: center;
+  /* ¡CAMBIA ESTO! */
+  align-items: center; /* Antes estaba en flex-start */
+  /* --- */
   color: var(--text-color);
   margin: 0;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-y: auto;
 }
+
 
 /* Panel de formulario */
 .titulo-logo {
@@ -83,13 +118,14 @@ hr.divisor2 {
   opacity: 0.6;                 /* un poco más suave */
 }
 .controls {
-  width: 340px;
-  height: 79vh;
+  width: 100%; /* Toma todo el ancho disponible */
+  max-width: 365px; /* Pero no más de esto en PC */
+  min-height: 79vh; /* Usamos min-height para que se estire si es necesario */
   background: var(--background-color);
   border-radius: 12px;
   box-shadow: 0 4px 15px var(--primary-color);
   padding: 18px;
-  overflow-y: auto;
+  overflow-y: visible; /* Lo cambiamos a visible */
   position: relative;
 }
 .controls h2 {
@@ -190,7 +226,7 @@ input:hover {
 } 
 /* Área de previsualización */
 .canvas-wrap {
-  height: 80vh;
+  /* ¡ADIÓS! height: 80vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,6 +235,8 @@ input:hover {
   border-radius: 12px;
   padding: 15px;
   background: var(--background-color);
+  width: 100%; /* Aseguramos que tome el espacio si está apilado */
+  max-width: 365px; /* Tamaño máximo para el preview */
 }
 
 /* Preview */
