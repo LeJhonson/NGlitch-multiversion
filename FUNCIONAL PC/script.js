@@ -21,11 +21,13 @@ const versionRadios = document.querySelectorAll('input[name="version"]');
 const datosFavoritos = {
   '1': { para: 'Julio Alberto Ramirez Suarez', numero: '310 296 0186'},
   '2': { para: 'Danilo Lopez', numero: '311 530 6423'},
-  '3': { para: 'Marlon Dallehd Rios Rojas', numero: 'JASKASJASK'},
+  '3': { para: 'Nelly Urquijo', numero: '310 484 0242'},
   '4': { para: 'Dolly Aguilera Forero', numero: '314 226 0851'},
-  '5': { para: 'Yineth Munoz Perez', numero: '321 385 2262'},
+  '5': { para: 'Kather Ortiz', numero: '321 236 5990'},
   '6': { para: 'Jose Eulises Gonzalez Menjura', numero: '321 957 6016'},
-  '7': { para: 'Dumar Alberto Sierra Fresneda', numero: '322 263 4983'}
+  '7': { para: 'Dumar Sierra', numero: '322 263 4983'},
+  '8': { para: 'Julio Orjuela', numero: '324 681 5878'},
+  '9': { para: 'Lenny Cardenas', numero: '312 526 8819'}
 };
 
 // Rellenar campos al seleccionar favorito
@@ -219,18 +221,18 @@ const versionConfig = {
   android: {
     backgroundImage: 'baseAndroid.jpg',
     previewHeight: '800px',
-    output: { width: 1080, height: 2400 }, // tamaño real para la descarga
+    output: { width: 720, height: 1610 }, // tamaño real para la descarga
     positions: {
-      para: { top: '1128px', left: '86px', fontSize: '39px' },
-      cuanto: { top: '1279px', left: '86px', fontSize: '39px' },
-      numero: { top: '1423px', left: '86px', fontSize: '39px' },
-      fecha: { top: '1570px', left: '86px', fontSize: '39px' }
+      para: { top: '757px', left: '57px', fontSize: '26px' },
+      cuanto: { top: '858px', left: '57px', fontSize: '26px' },
+      numero: { top: '955px', left: '57px', fontSize: '26px' },
+      fecha: { top: '1053px', left: '57px', fontSize: '26px' }
     },
     preview: {
-      para: { top: '47%', left: '8%', fontSize: '14px' },
-      cuanto: { top: '53.3%', left: '8%', fontSize: '14px' },
-      numero: { top: '59.3%', left: '8%', fontSize: '14px' },
-      fecha: { top: '65.4%', left: '8%', fontSize: '14px' }
+      para: { top: '47.6%', left: '8%', fontSize: '14px' },
+      cuanto: { top: '53.9%', left: '8%', fontSize: '14px' },
+      numero: { top: '59.9%', left: '8%', fontSize: '14px' },
+      fecha: { top: '65.9%', left: '8%', fontSize: '14px' }
     }
   },
   iphone: {
